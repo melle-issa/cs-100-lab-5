@@ -7,7 +7,7 @@
 
 TEST(OpTest, OpEvaluateNonZero) {
     Op* test = new Op(8);
-    EXPECT_EQ(test->evaluate(), 8);
+    EXPECT_EQ(test->evaluate(), 8); // change to 0
 }
 
 #endif //__OP_TEST_HPP__
