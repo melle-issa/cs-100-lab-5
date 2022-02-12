@@ -3,6 +3,7 @@
 #include "op_test.hpp"
 #include "rand_test.hpp"
 #include "base.hpp"
+#include "sub_test.hpp"
 
 TEST(Representation, zeroTest){
     ZeroOpMock obj1;
