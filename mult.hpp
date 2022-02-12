@@ -8,7 +8,10 @@ class Mult : public Base {
         Base *Left_op;
         Base *Right_op;
     public:
-        Mult(Base *leftVal, Base *rightVal) : Base() { }
+        Mult(Base *leftVal, Base *rightVal) : Base() {
+            Left_op = leftVal;
+            Right_op = rightVal;
+         }
         virtual double evaluate() { 
             return Left_op->evaluate() * Right_op->evaluate(); 
          }

@@ -7,8 +7,11 @@
 #include "base.hpp"
 
 TEST(MultTest, MultEvaluateNonZero) {
-    Mult* test = new Mult(1,2);
+    Base *obj1 = new Op(1.0);
+    Base *obj2 = new Op(2.0);
+    Base* test = new Mult(obj1,obj2);
     EXPECT_EQ(test->evaluate(), 2.0);
+    delete obj1, obj2, test;
 }
 
 #endif //__MULT_TEST_HPP__
