@@ -3,13 +3,13 @@
 
 #include "gtest/gtest.h"
 #include "base.hpp"
+#include "rand.hpp"
 #include "op.hpp"
 
 TEST(RandTest, RandEvaluateNonZero) {
     Rand* test = new Rand();
-    double *temp = test->getValue(); 
+    double temp = test->getVal(); 
     EXPECT_TRUE(temp != 100.0);
 }
-
 
 #endif

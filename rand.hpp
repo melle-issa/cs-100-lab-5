@@ -4,7 +4,7 @@
 #include "base.hpp"
 #include <iostream>
 #include <string>
-#include <ccmath>
+#include <cmath>
 
 class Rand : public Base {
     private: 
