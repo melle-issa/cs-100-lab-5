@@ -4,6 +4,8 @@
 #include "rand_test.hpp"
 #include "base.hpp"
 #include "mult_test.hpp"
+#include "div_test.hpp"
+#include "add_test.hpp"
 
 TEST(Representation, zeroTest){
     ZeroOpMock obj1;
