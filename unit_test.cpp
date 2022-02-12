@@ -1,6 +1,7 @@
 #include "gtest/gtest.h"
 
 #include "op_test.hpp"
+#include "rand_test.hpp"
 #include "base.hpp"
 
 TEST(Representation, zeroTest){
