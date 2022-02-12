@@ -2,6 +2,7 @@
 
 #include "op_test.hpp"
 #include "base.hpp"
+#include "mult_test.hpp"
 
 TEST(Representation, zeroTest){
     ZeroOpMock obj1;
