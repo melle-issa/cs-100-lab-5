@@ -9,8 +9,13 @@ class Div : public Base {
         Base *Right_op;
     public:
         Div(Base *leftVal, Base *rightVal) : Base() {
-            Left_op = leftVal;
-            Right_op = rightVal;
+            if (leftVal->evaluate() == 0.0 || rightVal->evaluate() == 0.0){
+                throw std::invalid_argument("error!!!");
+            }
+            else{
+           	 Left_op = leftVal;
+           	 Right_op = rightVal;
+            }
          }
         virtual double evaluate() {
             return Left_op->evaluate() / Right_op->evaluate();
