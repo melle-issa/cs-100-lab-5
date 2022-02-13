@@ -1,4 +1,4 @@
-#include <iostream>
+
 
 #include "base.hpp"
 #include "op.hpp"
@@ -16,7 +16,7 @@ int main() {
     Base* two = new Op(2);
     Base* mult = new Mult(seven, four);
     Base* add = new Add(three, mult);
-    Base* minus = new Sub(add, two);
+    Base* minus = new sub(add, two);
 
     std::cout << minus->stringify() << " = " << minus->evaluate() << std::endl;
     return 0;
