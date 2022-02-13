@@ -12,4 +12,14 @@ TEST(RandTest, RandEvaluateNonZero) {
     EXPECT_TRUE(temp != 100.0);
 }
 
+TEST(RandTest, RandEvaluateString){
+    Rand* test = new Rand();
+    EXPECT_TRUE(test->stringify() != "");
+}
+
+TEST(RandTest, RandEvaluateNegative){
+    Rand* test = new Rand();
+    EXPECT_TRUE(test->evaluate() >= 0);
+}
+
 #endif
