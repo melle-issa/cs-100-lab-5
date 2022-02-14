@@ -9,8 +9,8 @@ class Div : public Base {
         Base *Right_op;
     public:
         Div(Base *leftVal, Base *rightVal) : Base() {
-            if (leftVal->evaluate() == 0.0 || rightVal->evaluate() == 0.0){
-                throw std::invalid_argument("error!!!");
+            if (rightVal->evaluate() == 0.0){
+                throw std::invalid_argument("Error. Unable to divide by 0.");
             }
             else{
            	 Left_op = leftVal;
