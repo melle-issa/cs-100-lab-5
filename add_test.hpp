@@ -58,8 +58,10 @@ TEST(AddTest, AddEvaluateUsingMult) { // adding using Mult object
 TEST(AddTest, AddEvaluateUsingSub) { // adding using Sub object
     Base *obj1 = new Op(3.5);
     Base *sub1 = new Op(2.50); Base *sub2 = new Op(0.50000);
-    Base *obj2 = new Sub(sub1, sub2);
+    Base *obj2 = new sub(sub1, sub2);
     Base *test = new Add(obj1,obj2);
     EXPECT_EQ(test->evaluate(), 5.5);
-    EXPECT_EQ(test->stringify(), "(3.500000+(2.500000*0.500000))");
+    EXPECT_EQ(test->stringify(), "(3.500000+(2.500000-0.500000))");
 }
+
+#endif //__ADD_TEST_HPP__
