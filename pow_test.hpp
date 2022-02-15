@@ -52,4 +52,10 @@ TEST(PowTest, DoublePow){
     Base *test = new Pow(firstPow, obj1);
     EXPECT_EQ(test->evaluate(), 16.0);
 }
+TEST(PowTest, PowRounding){
+    Base *obj1 = new Op(4.0000002);
+    Base *obj2 = new Op(2.0);
+    Base *test = new Pow(obj1, obj2);
+    EXPECT_EQ(test->stringify(), "(4.000000**2.000000)");
+}
 #endif

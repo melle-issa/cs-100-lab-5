@@ -55,4 +55,10 @@ TEST(SubTest, TwoNegsString){
     Base *test = new sub(obj1, obj2);
     EXPECT_EQ(test->stringify(), "(-3.000000--4.000000)");
 }
+TEST(SubTest, Rounding){
+    Base *obj1 = new Op(4.0);
+    Base *obj2 = new Op(3.00000001);
+    Base *test = new sub(obj1, obj2);
+    EXPECT_EQ(test->stringify(), "(4.000000-3.000000)");
+}
 #endif
